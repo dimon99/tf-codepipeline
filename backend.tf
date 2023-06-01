@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "cluster.dima-test.ml"
+    bucket = "dima9000"
     key    = "my_stack"
     region = "us-east-1"
   }

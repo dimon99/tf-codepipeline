@@ -17,3 +17,10 @@ output "aws_ebs_volume_id" {
   value       = module.ec2.aws_ebs_volume_id
   description = "aws_ebs_volume volume_id"
 }
+
+
+output "lambda_bucket_name" {
+  description = "Name of the S3 bucket used to store function code."
+
+  value = aws_s3_bucket.lambda_bucket.id
+}
