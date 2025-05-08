@@ -1,4 +1,4 @@
-module "api_gateway" {
+/*module "api_gateway" {
   source = "terraform-aws-modules/apigateway-v2/aws"
 
   name          = "dev-http"
@@ -51,4 +51,4 @@ module "api_gateway" {
   tags = {
     Name = "http-apigateway"
   }
-}
+}*/

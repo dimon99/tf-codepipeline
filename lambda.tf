@@ -1,4 +1,4 @@
-data "aws_caller_identity" "current" {}
+/*data "aws_caller_identity" "current" {}
 data "aws_organizations_organization" "this" {}
 
 module "lambda_function_for_each" {
@@ -51,4 +51,4 @@ module "lambda_function_for_each" {
       resources = ["arn:aws:s3:::my-bucket/*"]
     }
   }
-}
+}*/
