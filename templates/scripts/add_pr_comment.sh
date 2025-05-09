@@ -18,12 +18,16 @@ if [ -z "$GITHUB_TOKEN" ] || [ -z "$GITHUB_REPO" ] || [ -z "$PR_NUMBER" ] || [ -
 fi
 
 # Create the JSON payload
-json_payload=$(cat << EOF
-{
-  "body": "\\`\\`\\`diff\n${COMMENT_MESSAGE}\n\\`\\`\\`"
-}
-EOF
-)
+#json_payload=$(cat << EOF
+#{
+#  "body": "\\`\\`\\`diff\n${COMMENT_MESSAGE}\n\\`\\`\\`"
+#}
+#EOF
+#)
+json_payload=$(jq -n \
+  --arg msg "$COMMENT_MESSAGE" \
+  '{body: "```diff\n" + ${COMMENT_MESSAGE} + "\n```"}')
+
 
 # Make the API request
 response=$(curl -s -X POST \
