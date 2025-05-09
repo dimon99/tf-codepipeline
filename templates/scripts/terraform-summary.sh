@@ -9,6 +9,7 @@
 # + some.resource                                                                #
 # - another.resource                                                             #
 # ```                                                                            #
+
 #                                                                                #
 # USAGE                                                                          #
 #                                                                                #
