@@ -20,7 +20,7 @@ fi
 # Create the JSON payload
 json_payload=$(cat << EOF
 {
-  "body": "$COMMENT_MESSAGE"
+  "body": "\\`\\`\\`diff\n${COMMENT_MESSAGE}\n\\`\\`\\`"
 }
 EOF
 )
