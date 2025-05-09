@@ -1,12 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 # Required environment variables:
 # GITHUB_TOKEN: Your GitHub personal access token
 # GITHUB_REPO: repository in format "owner/repo"
 # PR_NUMBER: Pull request number
 # COMMENT_MESSAGE: The message to post for PR
-
-set +x
 
 if [ -z "$GITHUB_TOKEN" ] || [ -z "$GITHUB_REPO" ] || [ -z "$PR_NUMBER" ] || [ -z "$COMMENT_MESSAGE" ]; then
     echo "Error: Required environment variables are not set"
