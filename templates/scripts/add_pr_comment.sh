@@ -6,6 +6,11 @@
 # PR_NUMBER: Pull request number
 # COMMENT_MESSAGE: The message to post for PR
 
+: "${GITHUB_TOKEN:?}"
+: "${GITHUB_REPO:?}"
+: "${PR_NUMBER:?}"
+: "${COMMENT_MESSAGE:?}"
+
 if [ -z "$GITHUB_TOKEN" ] || [ -z "$GITHUB_REPO" ] || [ -z "$PR_NUMBER" ] || [ -z "$COMMENT_MESSAGE" ]; then
     echo "Error: Required environment variables are not set"
     echo "Please set: GITHUB_TOKEN, GITHUB_REPO, PR_NUMBER, COMMENT_MESSAGE"
